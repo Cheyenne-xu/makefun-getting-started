@@ -21,6 +21,7 @@ This guide walks you from zero to your first entry.
 - [3. Download the bounty kit](#3-download-the-bounty-kit)
 - [4. Build the entry with your agent](#4-build-the-entry-with-your-agent)
 - [5. Bundle your transcripts and check your entry](#5-bundle-your-transcripts-and-check-your-entry)
+- [Before you submit, run through this list](#before-you-submit-run-through-this-list)
 - [6. Submit](#6-submit)
 - [7. If the checks reject it](#7-if-the-checks-reject-it)
 - [8. Claim your prize](#8-claim-your-prize)
@@ -77,6 +78,8 @@ The front page sorts bounties into Trending, New and Ending soon, in categories 
 
 Before you commit to one, read the rules end to end. Some bounties need extra software or an account somewhere else, and the page says so up front. A bounty whose rules you cannot meet — a Windows-only tool on a Linux machine, an entry fee you do not want to pay — is a bounty to skip, however big the prize looks.
 
+Also check the entry limits on the bounty page before you build: most bounties take at most a few entries per account per day, and a rejected entry still counts toward that day's limit. That is why the local checks in step 5 matter — they catch a miss before it costs you an entry.
+
 ## 3. Download the bounty kit
 
 Every bounty ships a kit: its rules, its data, a starter entry where one exists, and the `makefun` command line. Get it from the bounty page's entry form, or in a terminal:
@@ -121,6 +124,18 @@ Before you enter, run the site's own checks on your machine. A rejected entry st
 node cli/makefun.mjs check --kit . --repo ../my-entry --transcripts transcripts.tar.gz
 ```
 
+If a personal detail of yours — a full name, an email address, a phone number — shows up in the sessions and judging does not need it, pass it to `bundle` with `--redact "<text>"` and it is stripped before upload.
+
+## Before you submit, run through this list
+
+Most rejections come from a short list of misses. Check each one before you spend an entry:
+
+- The repository is **public**, created **after the bounty opened**, and owned by the GitHub account linked to your make.fun account.
+- The commit you enter is on a branch of that repository.
+- An **OSI-approved license** (MIT, Apache-2.0) is in the repository at that commit.
+- The **README names your referral code** and carries the make.fun badge lines for your repository.
+- The **transcripts are bundled** and the bundle's checks pass on your machine first.
+
 ## 6. Submit
 
 Either use the **Enter** form on the bounty page (paste your repository link and commit, upload the bundle) or submit from the kit:
@@ -154,7 +169,7 @@ node cli/makefun.mjs claim --claim <claim-id> \
 
 ## Your own referral link
 
-Every account gets a referral link like `https://make.fun/r/<code>`, and `?ref=<code>` on any make.fun page works too. You earn USDC rewards when people sign up through it and take part, plus a share of what they win for a while after they sign up, which make.fun pays on top, so their own reward stays whole. Your link, what each reward is worth right now, and everything you have earned are on the **Referrals** tab of your profile. Every reward is reviewed for at least a day before you can claim it, and only real new accounts that take part count.
+Every account gets a referral link like `https://make.fun/r/<code>`, and `?ref=<code>` on any make.fun page works too. A referral binds to the code a visitor's browser first saw, and that first touch wins for 60 days — a later link does not replace it. You earn USDC rewards when people sign up through it and take part, plus a share of what they win for a while after they sign up, which make.fun pays on top, so their own reward stays whole. Your link, what each reward is worth right now, and everything you have earned are on the **Referrals** tab of your profile. Every reward is reviewed for at least a day before you can claim it, and only real new accounts that take part count.
 
 If this guide helped, signing up through [my link](https://make.fun/r/s6mf4kx2) (code `s6mf4kx2`) is a nice way to say thanks.
 
